@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/sign_up.css">
+	<title>Sign Up</title>
+    <script type="text/javascript">
+        function check(){
+        var x=/\w+@(gmail.com|yahoo.com|hotmail.com)$/;
+        var y=document.getElementById("email").value;
+        var p=document.getElementById("name").value;
+        var a=document.getElementById("password").value;
+        var b=document.getElementById("cnf").value;
+        var c=document.getElementById("phone").value;
+        var d=document.getElementById("dob").value;
+        var age=new Date(d);
+        var date= new Date();
+        var c_age=date.getFullYear()-age.getFullYear();
+
+        if(x.test(y)==false){
+         return alert("Invalid E-mail");
+            
+        }
+        if(p==""){
+            return alert("Name can't be NULL!");
+        }
+        if(a!=b){
+         return alert("PASSWORD didn't match!");
+            
+        }
+        
+        if(/^\d{10}$/.test(c)==false){
+         return alert("Invalid phone no!");
+            
+        }
+        
+        if(c_age <18)
+        {
+         return alert("You aren't adult");
+            
+        }
+        else{
+            return alert("Welcome!");
+        }
+
+       }
+    </script>
+</head>
+<body style="background-image: url(pics/signup.jpeg); backdrop-filter: blur(2px);background-size: cover; background-repeat: no-repeat; background-position: center">
+	<h1 class="title">Sign Up</h1>
+	<center>
+    <div class="box">
+        <form id="signup-form" onsubmit="check()">
+    	<input type="text" name="text" id="name" placeholder="NAME" class="input name">
+    	<br>
+    	<input type="number" id="phone" placeholder="MOBILE NO." class="input contactNumber">
+        <br>
+        <input type="date" name="text" id="dob" placeholder="DOB" class="input dob">
+        <br>
+        <input type="text" name="text" placeholder="PROFESSION" class="input prof">
+        <br>
+        <input type="text" id="email" name="text" placeholder="EMAIL ID" class="input email">
+        <br>
+        <input type="password" name="text" id="password" placeholder="PASSWORD" class="input password">
+    	<br>
+        <input type="password" name="text" id="cnf" placeholder="CONFIRM PASSWORD" class="input">
+        <br>
+        <textarea placeholder="DETAILS" class="details about"></textarea>
+        <br>
+        <input type="submit" class="button" value="SIGN UP">"<a href="log_in.html">SIGN UP</a>"</input>
+        <button class="back" type="button"><a href="landingPage.html">back</a></button>
+        </form>
+    </div>
+    </center>
+    <script type="text/javascript" src="/js/sign_up.js"></script>
+</body>
+</html>
