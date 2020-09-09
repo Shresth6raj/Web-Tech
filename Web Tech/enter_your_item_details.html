@@ -3,12 +3,40 @@
 <head>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/enter_your_item_details.css">
-	<title>Enter your item details</title>
+	<title>enter_your_items</title>
+	<link href="https://fonts.googleapis.com/css?family=Lemon&display=swap" rel="stylesheet">
+	<style>
+@import url('https://fonts.googleapis.com/css?family=Lemon&display=swap');
+</style>
 </head>
-<body>
+
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+<body style="background-color:#DCDCDC ;background-position: center;background-repeat: no-repeat;">
+	<nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top" style="padding-top: 10px;padding-bottom: 0;">
+        <div class="container-fluid"><a class="navbar-brand" href="#"><img src="pics/register.png" style="height: 37px;"></a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="padding-top: 0;padding-bottom: 0;"><input class="search" type="text" name="search" placeholder="Search"></a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="padding-top: 0;padding-bottom: 0;"><img class="bell" src="pics/bell.png"></a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" href="#" style="padding-top: 0;padding-bottom: 0;"><img class="young" src="pics/young.png"></a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
 	<h1 class="title"><b>ENTER YOUR PRODUCT DETAILS</b></h1>
+	<br><br>
 	<center>
-    <div class="box">
+    <div class="box" style>
 		<form id="item-form">
 		<input type="text" name="name" placeholder="Item" class="input name">
     	<br>
@@ -18,9 +46,11 @@
 		<br>
 		<input type="text" name="text" placeholder="Product Image" class="input image">
         <br>
-        <button class="back">back</button>
-        <button class="button" type="submit">POST</button>
+
+			<center>	<button  class="button" type="submit">POST</button></center>
 		</form>
+
+
     </div>
 	</center>
 	<script type="text/javascript" src="/js/create_product.js"></script>
